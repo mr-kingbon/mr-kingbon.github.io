@@ -791,6 +791,7 @@ img {
     padding: 32px;
     transition: all var(--transition-slow);
     overflow: hidden;
+    min-width: 0;
 }
 
 .project-card::before {
@@ -915,6 +916,7 @@ img {
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 20px;
+    min-width: 0;
 }
 
 .tech-tag {
@@ -936,9 +938,10 @@ img {
 
 .project-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 8px;
     margin-bottom: 24px;
+    min-width: 0;
 }
 
 .feature {
@@ -954,29 +957,7 @@ img {
     font-size: 0.9rem;
 }
 
-.project-links {
-    display: flex;
-    gap: 12px;
-}
 
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--accent-cyan);
-    padding: 8px 16px;
-    border: 1px solid rgba(0, 242, 255, 0.2);
-    border-radius: var(--radius-sm);
-    transition: all var(--transition);
-}
-
-.project-link:hover {
-    background: rgba(0, 242, 255, 0.1);
-    border-color: var(--accent-cyan);
-    box-shadow: var(--glow-cyan);
-}
 
 /* ============================================
    CONTACT SECTION
@@ -1210,10 +1191,12 @@ img {
         text-align: center;
         gap: 40px;
         padding-top: 140px;
+        min-height: auto;
     }
 
     .hero-subtitle {
         margin: 0 auto 36px;
+        max-width: 100%;
     }
 
     .hero-cta {
@@ -1311,6 +1294,12 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+        margin-bottom: 16px;
+    }
+
     .section-title {
         font-size: 1.8rem;
     }
@@ -1330,7 +1319,7 @@ img {
     }
 
     .cta-card {
-        padding: 28px;
+        padding: 24px 16px;
     }
 
     .hero-cta {
@@ -1340,5 +1329,13 @@ img {
     .btn {
         justify-content: center;
         width: 100%;
+    }
+
+    .highlight-card {
+        padding: 16px;
+    }
+
+    .terminal-body {
+        font-size: 0.7rem;
     }
 }
